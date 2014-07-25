@@ -190,27 +190,11 @@
 	/*	Intro Page Register Form Validation
 	/*----------------------------------------------------*/
 	
-	$(document).ready(function(){
-	
-		"use strict";
-
-		$(".form_register form").validate({
-			rules:{ 
-				email:{
-						required: true,
-						email: true,
-						}
-					},
-					messages:{
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							}, 							
-						}
-		});	
+	$(document).ready
 
 		function betaSignup(){
-			email = $('.email').val("adding you...");
+			email = $('#email').val();
+			$('.form-control').val("adding you...");
 
 			$.ajax({
 				url:"/cloud/api/beta?email="+email +"&action=signup",
