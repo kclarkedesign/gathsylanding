@@ -207,7 +207,23 @@
 								email: "Your email address must be in the format of name@domain.com"
 							}, 							
 						}
-		});			
+		});	
+
+		function betaSignup(){
+			email = $('#email').val("adding you...");
+
+			$.ajax({
+				url:"/cloud/api/beta?email="+email +"&action=signup",
+				data:{
+					"email":email
+				},
+				complete:function(){
+					$('#email').val("added!")
+
+				}
+			})
+
+		}		
 		
 	});
 

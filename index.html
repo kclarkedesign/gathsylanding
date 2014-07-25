@@ -120,9 +120,9 @@
 							<!-- Register Form -->	
 							<div class="row">
 								<div class="col-sm-12">
-									<form action="contact.php" name="contactform" method="post">
+									<form action="javascript:betaSignup()" name="contactform" method="post" novalidate="novalidate">
 										<input id="email" class="form-control" type="email" name="email" placeholder="Enter your email"> 
-										<button id="form_register_btn" type="submit" class="btn btn-primary btn-lg">Register Now</button>
+										<button onclick="betaSignup()" id="form_register_btn" type="submit" class="btn btn-primary btn-lg">Register Now</button>
 									</form>
 								</div>	
 							</div>
