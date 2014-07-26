@@ -193,7 +193,7 @@
 
 		function betaSignup(){
 			email = $('#email').val();
-			$('email').val("adding you...");
+			$('#email').val("adding you...");
 
 			$.ajax({
 				url:"/cloud/api/beta?email="+email +"&action=signup",
@@ -201,12 +201,10 @@
 					"email":email
 				},
 				complete:function(){
-					$('.email').val("added!")
+					$('#email').val("added!")
 
 				}
-			})
-
-		}		
+			})		
 		
-	});
+	}
 
