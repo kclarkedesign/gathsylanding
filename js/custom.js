@@ -190,11 +190,10 @@
 	/*	Intro Page Register Form Validation
 	/*----------------------------------------------------*/
 	
-	$(document).ready
 
 		function betaSignup(){
 			email = $('#email').val();
-			$('.form-control').val("adding you...");
+			$('email').val("adding you...");
 
 			$.ajax({
 				url:"/cloud/api/beta?email="+email +"&action=signup",
